@@ -1,0 +1,16 @@
+.row
+  .col-md-12
+    h1 User Details
+
+    .bold Name
+    = @user.name
+
+    .bold Email
+    = @user.email
+
+    .bold Gender
+    = @user.gender
+
+    .clear_float
+    br
+    = link_to 'Back', users_path, class: 'btn btn-default'

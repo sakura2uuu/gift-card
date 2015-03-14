@@ -1,0 +1,19 @@
+.row
+  .col-md-12
+    h1 Gift Cards
+
+    table.table.table-hover
+      thead
+        tr
+          th Title
+          th Message
+          th Owner
+
+      tbody
+        - @giftcards.each do |giftcard|
+          tr.clickable onclick = "window.location = '#{giftcard_path(giftcard)}';"
+            td= giftcard.title
+            td= giftcard.message
+            td= giftcard.user.email
+
+    = link_to 'New Gift Card', new_giftcard_path, class: 'btn btn-warning'

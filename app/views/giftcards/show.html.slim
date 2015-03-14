@@ -1,0 +1,19 @@
+.row
+  .col-md-12
+    h1 Gift Card Details
+
+    .bold Title
+    = @giftcard.title
+
+    .bold Message
+    = @giftcard.message
+
+    .bold User Name
+    = @giftcard.user.name
+
+    .bold User Email
+    = @giftcard.user.email
+
+    .clear_float
+    br
+    = link_to 'Back', giftcards_path, class: 'btn btn-default'

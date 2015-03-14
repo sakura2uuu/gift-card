@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :giftcard do
-    title "MyString"
-message "MyText"
-user_id 1
+    sequence(:title) {|n| "Title #{n}" }
+    sequence(:message) {|n| "Message Body #{n}" }
+    association :user, factory: :user
   end
 end
