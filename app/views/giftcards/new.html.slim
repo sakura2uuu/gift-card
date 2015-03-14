@@ -7,7 +7,7 @@
   == render 'shared/errors', object: f.object
   = f.input :title, label: 'Title', wrapper_html: {class: 'col-sm-10'}
   = f.input :message, label: 'Message', wrapper_html: {class: 'col-sm-10'}
-  = f.input :user_id, collection: @users, label: 'Owner', wrapper_html: {class: 'col-sm-4'}
+  = f.input :user_id, collection: @users, label: 'Owner', label_method: proc {|u| u.name}, value_method: proc {|u| u.id}, wrapper_html: {class: 'col-sm-4'}
 
   .clear_float
   div class='col-sm-2'
