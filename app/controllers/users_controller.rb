@@ -14,12 +14,7 @@ class UsersController < ApplicationController
   def new
     # This method is a stub. You should replace everything in here with your own implementation
     #@user = create_fake_user
-    #check if user's email is in the database
-    if User.find_by email: params[:email]
-      render 'new'
-    else
-      @user = User.new
-    end
+    @user = User.new
   end
 
   def create
